@@ -66,6 +66,8 @@ def main():
     file_path = os.path.join("data", f"{args.file_name}.xlsx")
     weights_path = os.path.join("data", f"{args.weights_name}.json")
 
+    os.makedirs("plots", exist_ok=True)
+
     # read element U.C sheet
     uc = pd.read_excel(file_path, sheet_name="Element U.C.")
 
